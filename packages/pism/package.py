@@ -79,6 +79,7 @@ class Pism(CMakePackage):
     depends_on('udunits')
     depends_on('proj@6:')
     depends_on('everytrace', when='+everytrace')
+    depends_on('cmake@3.1:', type='build')
 
     extends('python', when='+python')
     depends_on('python@2.7:2.8,3.3:', when='@1.1: +python')
