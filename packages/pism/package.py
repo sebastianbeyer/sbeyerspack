@@ -16,6 +16,7 @@ class Pism(CMakePackage):
     maintainers = ['citibeth']
 
     version('develop', branch='dev')
+    version('2.0.2', )
     version('1.2.2', sha256='ecb880af26643e80b890f74efcf0e4d7e5d60adbc921ef281d3f00904020c624')
     version('1.1.4', sha256='8ccb867af3b37e8d103351dadc1d7e77512e64379519fe8a2592668deb27bc44')
     version('0.7.x', branch='stable0.7')
