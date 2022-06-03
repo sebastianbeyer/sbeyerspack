@@ -16,6 +16,7 @@ class Pism(CMakePackage):
     maintainers = ['citibeth']
 
     version('develop', branch='dev')
+    version('2.0.2', sha256='f316cc50d6a7cd77df9fc416c90d7c16debdc8ea050ef57deb621e1d72440403')
     version('1.2.2', sha256='ecb880af26643e80b890f74efcf0e4d7e5d60adbc921ef281d3f00904020c624')
     version('1.1.4', sha256='8ccb867af3b37e8d103351dadc1d7e77512e64379519fe8a2592668deb27bc44')
     version('0.7.x', branch='stable0.7')
@@ -32,7 +33,7 @@ class Pism(CMakePackage):
     variant('proj', default=True,
             description='Use Proj.4 to compute cell areas, '
             'longitudes, and latitudes.')
-    variant('parallel-netcdf4', default=False,
+    variant('parallel-netcdf4', default=True,
             description='Enables parallel NetCDF-4 I/O.')
     variant('parallel-netcdf3', default=False,
             description='Enables parallel NetCDF-3 I/O using PnetCDF.')
