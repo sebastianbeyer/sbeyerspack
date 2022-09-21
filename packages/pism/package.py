@@ -16,11 +16,15 @@ class Pism(CMakePackage):
     maintainers = ['citibeth']
 
     version('develop', branch='dev')
+    version('2.0.4', sha256='e5ad1ce8359238bd4e5343e0d75f5f96ca226018f7dce4bda270acf5249ae9a4')
     version('2.0.2', sha256='f316cc50d6a7cd77df9fc416c90d7c16debdc8ea050ef57deb621e1d72440403')
     version('1.2.2', sha256='ecb880af26643e80b890f74efcf0e4d7e5d60adbc921ef281d3f00904020c624')
     version('1.1.4', sha256='8ccb867af3b37e8d103351dadc1d7e77512e64379519fe8a2592668deb27bc44')
     version('0.7.x', branch='stable0.7')
     version('icebin', branch='efischer/dev')
+
+    # patch to disable cmake checking for PETSC, because the check does somehow not work on HLRN
+    patch('https://github.com/sebastianbeyer/pism/commit/7475be94dba8ba85bd58d3179568cc4714d17fcc.patch', sha256="b4c689a915a466d1c7d21973fe801ec59407145d6a1471a7ff7d52f8d0eef4db")
 
     variant('extra', default=False,
             description='Build extra executables (testing/verification)')
