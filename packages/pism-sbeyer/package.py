@@ -15,8 +15,9 @@ class PismSbeyer(CMakePackage):
 
     maintainers = ['citibeth']
 
-    version('master', branch='master')
+    version('main', branch='main')
     version('current', branch='current')
+    version('hfrozen', branch='Hfrozen')
     version('debm', branch='sbeyer/dEBM')
     version('sbeyer_GI_preventfreeze ', branch='sbeyer/GI_preventfreeze ')
     version('1.2.2', sha256='ecb880af26643e80b890f74efcf0e4d7e5d60adbc921ef281d3f00904020c624')
